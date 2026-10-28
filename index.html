@@ -190,8 +190,7 @@
   const BRANCH = "main";
   let PLAYLISTS = [];
 
-  const rawUrl = file => `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${file}`;
-  const openUrl = p => `https://mediagg.app/open/?url=${rawUrl(p.file)}`;
+  const openUrl = p => `https://mediagg.app/open/?url=${p.url}`;
   const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const fold = s => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
   const icon = {
@@ -223,7 +222,7 @@
   function render() {
     const q = fold(state.q.trim());
     const matches = PLAYLISTS.map(p => {
-      const inTitle = !q || fold(p.title).includes(q) || fold(p.description).includes(q) || fold(p.file).includes(q);
+      const inTitle = !q || fold(p.title).includes(q) || fold(p.description).includes(q) || fold(p.label).includes(q);
       const hits = q ? p.channels.filter(c => fold(c.name).includes(q)) : [];
       return { p, ok: inTitle || hits.length > 0, hits };
     }).filter(m => m.ok);
@@ -257,7 +256,7 @@
               <div class="name"><h2>${highlight(p.title, q)}</h2><span class="cat">${esc(p.category)}</span></div>
               <p class="desc">${esc(p.description)}</p>
               ${hitLine}
-              <div class="file"><span>${esc(p.file)}</span><button class="icon-btn sm" type="button" data-copy="${rawUrl(p.file)}" title="Copy playlist address" aria-label="Copy the address of ${esc(p.title)}">${icon.copy}</button></div>
+              <div class="file"><span title="${esc(p.url)}">${esc(p.label)}</span><button class="icon-btn sm" type="button" data-copy="${esc(p.url)}" title="Copy playlist address" aria-label="Copy the address of ${esc(p.title)}">${icon.copy}</button></div>
             </div>
             <span class="count">${p.channels.length} ch</span>
             <div class="acts">
