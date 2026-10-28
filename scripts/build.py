@@ -15,6 +15,8 @@ import sys
 import urllib.request
 from pathlib import Path
 
+import catalogue
+
 API = "https://iptv-org.github.io/api"
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -84,6 +86,7 @@ def main():
             lines.append(stream["url"])
         (ROOT / "playlists" / filename).write_text("\n".join(lines) + "\n")
         print(f"playlists/{filename}: {len(picked)} entries")
+    catalogue.write()
 
 
 if __name__ == "__main__":

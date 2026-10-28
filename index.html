@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>m3ustreamz</title>
+<meta name="description" content="Curated M3U playlists of free, legal streams, built from iptv-org. Open any of them in Mediagg in one tap.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%235b2bd9'/%3E%3Cpath d='M12 9v14l11-7z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  /* Layout: a short header, a sticky search-and-filter bar, then a dense index of playlists, one row each, expandable to its channels. */
+  :root {
+    --bg: #f2f1f6;
+    --surface: #ffffff;
+    --ink: #1b1830;
+    --muted: #625e78;
+    --line: #dcd9e6;
+    --accent: #5b2bd9;
+    --accent-ink: #ffffff;
+    --signal: #e8572a;
+    --chip: #ebe7f8;
+    --mark: #ffe2a8;
+    --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+    --body: "Figtree", "Helvetica Neue", "Segoe UI", system-ui, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #13111d; --surface: #1c1929; --ink: #eeecf6; --muted: #a29db8; --line: #2f2b42;
+      --accent: #a58bff; --accent-ink: #160f33; --signal: #ff8a5c; --chip: #272238; --mark: #5a4313;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #13111d; --surface: #1c1929; --ink: #eeecf6; --muted: #a29db8; --line: #2f2b42;
+    --accent: #a58bff; --accent-ink: #160f33; --signal: #ff8a5c; --chip: #272238; --mark: #5a4313;
+    color-scheme: dark;
+  }
+
+  :root { padding-block: env(safe-area-inset-top, 0px) env(safe-area-inset-bottom, 0px); }
+  [hidden] { display: none !important; }
+  body { margin: 0; -webkit-text-size-adjust: 100%; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 1rem; line-height: 1.5; }
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+  .wrap {
+    max-width: 60rem; margin: 0 auto;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 2rem 3rem;
+    display: grid; gap: 1.5rem;
+  }
+
+  header { display: grid; gap: .7rem; }
+  .brand { display: flex; align-items: center; gap: .6rem; font-family: var(--mono); font-size: .8rem; color: var(--muted); letter-spacing: .04em; }
+  .onair { display: inline-flex; align-items: center; gap: .4rem; padding: .15rem .5rem; border: 1px solid var(--signal); color: var(--signal); border-radius: 3px; font-weight: 500; text-transform: uppercase; letter-spacing: .12em; font-size: .68rem; }
+  .onair::before { content: ""; width: .45rem; height: .45rem; border-radius: 50%; background: var(--signal); animation: pulse 2s ease-in-out infinite; }
+  @keyframes pulse { 50% { opacity: .3; } }
+  @media (prefers-reduced-motion: reduce) { .onair::before { animation: none; } }
+  h1 { font-family: var(--display); font-weight: 800; font-size: clamp(2.2rem, 7vw, 3.4rem); line-height: .95; letter-spacing: -.035em; margin: 0; }
+  h1 span { color: var(--accent); }
+  .lede { margin: 0; max-width: 40rem; color: var(--muted); text-wrap: pretty; }
+  .lede a { color: inherit; }
+
+  /* Toolbar */
+  .toolbar {
+    position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+    background: var(--bg); padding-block: .75rem; display: grid; gap: .6rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .search { position: relative; }
+  .search svg { position: absolute; left: .8rem; top: 50%; transform: translateY(-50%); width: 1rem; height: 1rem; color: var(--muted); pointer-events: none; }
+  #q {
+    width: 100%; box-sizing: border-box; padding: .75rem .9rem .75rem 2.4rem; border-radius: 8px;
+    border: 1px solid var(--line); background: var(--surface); color: var(--ink); font: 500 1rem var(--body);
+  }
+  #q:focus { outline: 2px solid var(--accent); outline-offset: -1px; border-color: transparent; }
+  .filters { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; }
+  .chip {
+    padding: .35rem .7rem; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: var(--muted);
+    font: 500 .82rem/1 var(--body); cursor: pointer; font-variant-numeric: tabular-nums;
+  }
+  .chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .meta { margin-left: auto; display: flex; align-items: center; gap: .6rem; font-size: .82rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+  #sort { font: 500 .82rem var(--body); color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: .3rem .4rem; }
+
+  /* Index */
+  .index { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+  .row { border-top: 1px solid var(--line); }
+  .row:first-child { border-top: 0; }
+  .row-main { display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: .4rem 1rem; padding: .8rem 1rem; }
+  .info { min-width: 0; display: grid; gap: .1rem; }
+  .name { display: flex; align-items: baseline; flex-wrap: wrap; gap: .5rem; }
+  h2 { margin: 0; font: 600 1.02rem/1.3 var(--body); }
+  .cat { font: 500 .66rem/1 var(--mono); text-transform: uppercase; letter-spacing: .12em; color: var(--accent); }
+  .desc { margin: 0; color: var(--muted); font-size: .88rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .file { display: flex; align-items: center; gap: .25rem; font-family: var(--mono); font-size: .74rem; color: var(--muted); min-width: 0; }
+  .file span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+  .hit { font-size: .82rem; color: var(--ink); }
+  mark { background: var(--mark); color: inherit; border-radius: 2px; padding: 0 .1em; }
+
+  .count { font: 500 .8rem/1 var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; text-align: right; }
+  .acts { display: flex; align-items: center; gap: .25rem; }
+  .btn {
+    display: inline-flex; align-items: center; gap: .4rem; padding: .5rem .8rem; border-radius: 7px;
+    font: 600 .86rem/1 var(--body); text-decoration: none; white-space: nowrap;
+    background: var(--accent); color: var(--accent-ink); border: 1px solid var(--accent);
+  }
+  .btn:hover { filter: brightness(1.08); }
+  .btn svg { width: .95em; height: .95em; flex: none; }
+  .icon-btn { flex: none; display: inline-grid; place-items: center; width: 1.9rem; height: 1.9rem; padding: 0; border: 0; border-radius: 6px; background: transparent; color: var(--muted); cursor: pointer; }
+  .icon-btn:hover { background: var(--chip); color: var(--ink); }
+  .icon-btn svg { width: 1rem; height: 1rem; transition: transform .15s; }
+  .icon-btn.sm { width: 1.5rem; height: 1.5rem; }
+  .icon-btn.sm svg { width: .85rem; height: .85rem; }
+  .row.open .toggle svg { transform: rotate(180deg); }
+  @media (prefers-reduced-motion: reduce) { .icon-btn svg { transition: none; } }
+  .btn:focus-visible, .icon-btn:focus-visible, .chip:focus-visible, #sort:focus-visible, .lede a:focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; }
+
+  .channels { list-style: none; margin: 0; padding: 0 1rem 1rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); gap: .35rem; }
+  .channels li { display: flex; gap: .5rem; padding: .4rem .5rem; border-radius: 6px; background: var(--chip); font-size: .86rem; min-width: 0; }
+  .ch-no { font: 500 .7rem/1.5 var(--mono); color: var(--muted); flex: none; width: 1.4rem; font-variant-numeric: tabular-nums; }
+  .ch-name { min-width: 0; overflow-wrap: anywhere; }
+  .ch-group { font: 500 .62rem/1.9 var(--mono); text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin-left: auto; flex: none; }
+
+  .empty { padding: 2rem 1rem; text-align: center; color: var(--muted); }
+  .empty a { color: var(--accent); }
+  .empty button { font: inherit; color: var(--accent); background: none; border: 0; text-decoration: underline; cursor: pointer; }
+
+  @media (max-width: 560px) {
+    .row-main { grid-template-columns: 1fr auto; }
+    .count { grid-column: 1; grid-row: 2; text-align: left; }
+    .acts { grid-column: 2; grid-row: 1 / span 2; flex-direction: column-reverse; align-items: flex-end; }
+    .meta { margin-left: 0; width: 100%; justify-content: space-between; }
+  }
+
+  .how { display: grid; gap: .8rem; }
+  .how h2 { font: 800 1.15rem/1.2 var(--display); }
+  .steps { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; counter-reset: step; }
+  .steps li { counter-increment: step; display: grid; align-content: start; gap: .25rem; color: var(--muted); font-size: .93rem; }
+  .steps li::before { content: counter(step); font: 800 1.5rem/1 var(--display); color: var(--accent); }
+  .steps strong { color: var(--ink); font-weight: 600; }
+
+  footer { border-top: 1px solid var(--line); padding-top: 1.2rem; color: var(--muted); font-size: .85rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1.5rem; }
+  footer a { color: inherit; }
+  code { font-family: var(--mono); font-size: .85em; }
+
+  .toast { position: fixed; left: 50%; bottom: calc(1.2rem + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); z-index: 20; background: var(--ink); color: var(--bg); padding: .6rem 1rem; border-radius: 8px; font-size: .9rem; font-weight: 500; max-width: calc(100vw - 32px); overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="onair">Live</span> c4 Entertainment</div>
+    <h1>m3u<span>streamz</span></h1>
+    <p class="lede">Curated M3U playlists of free, legal streams, built from <a href="https://github.com/iptv-org/iptv">iptv-org</a>. Find a playlist or a channel, then open it in Mediagg.</p>
+  </header>
+
+  <main>
+    <div class="toolbar">
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="Search playlists and channels" aria-label="Search playlists and channels" autocomplete="off">
+      </label>
+      <div class="filters" id="filters" role="group" aria-label="Category"></div>
+    </div>
+    <ul class="index" id="index"></ul>
+  </main>
+
+  <section class="how" aria-labelledby="how-title">
+    <h2 id="how-title">Opening a playlist in Mediagg</h2>
+    <ol class="steps">
+      <li><strong>Tap Open in Mediagg.</strong> With the app installed it opens there; without it, the playlist opens in Mediagg in your browser.</li>
+      <li><strong>Choose where it goes.</strong> Subscriptions keeps it up to date as we rebuild it; Playlists takes the channels in it today.</li>
+      <li><strong>Prefer another player?</strong> The copy icon beside the file name copies its address for any app that reads M3U.</li>
+    </ol>
+  </section>
+
+  <footer>
+    <span>Rebuilt with <code>python3 scripts/build.py</code> from the iptv-org API.</span>
+    <a href="https://github.com/c4Entertainment/m3ustreamz">github.com/c4Entertainment/m3ustreamz</a>
+  </footer>
+</div>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+  // playlists.json is written by scripts/catalogue.py from playlists/ and playlists/catalogue.json.
+  const REPO = "c4Entertainment/m3ustreamz";
+  const BRANCH = "main";
+  let PLAYLISTS = [];
+
+  const rawUrl = file => `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${file}`;
+  const openUrl = p => `https://mediagg.app/open/?url=${rawUrl(p.file)}`;
+  const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const fold = s => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+  const icon = {
+    play: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>',
+    copy: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>',
+    chevron: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>'
+  };
+
+
+  const state = { q: "", cat: "All", sort: "az", open: new Set() };
+  try { state.sort = localStorage.getItem("m3us-sort") || "az"; } catch (e) {}
+
+  function highlight(text, q) {
+    if (!q) return esc(text);
+    const at = fold(text).indexOf(q);
+    if (at < 0) return esc(text);
+    return esc(text.slice(0, at)) + "<mark>" + esc(text.slice(at, at + q.length)) + "</mark>" + esc(text.slice(at + q.length));
+  }
+
+  function renderFilters(counts) {
+    const cats = ["All", ...[...new Set(PLAYLISTS.map(p => p.category))].sort()];
+    document.getElementById("filters").innerHTML = cats.map(c =>
+      `<button class="chip" type="button" data-cat="${esc(c)}" aria-pressed="${c === state.cat}">${esc(c)} ${counts[c] ?? 0}</button>`).join("") +
+      `<span class="meta"><span id="shown"></span><select id="sort" aria-label="Sort">
+        <option value="az">A–Z</option><option value="channels">Most channels</option></select></span>`;
+    document.getElementById("sort").value = state.sort;
+  }
+
+  function render() {
+    const q = fold(state.q.trim());
+    const matches = PLAYLISTS.map(p => {
+      const inTitle = !q || fold(p.title).includes(q) || fold(p.description).includes(q) || fold(p.file).includes(q);
+      const hits = q ? p.channels.filter(c => fold(c.name).includes(q)) : [];
+      return { p, ok: inTitle || hits.length > 0, hits };
+    }).filter(m => m.ok);
+
+    const counts = { All: matches.length };
+    matches.forEach(m => { counts[m.p.category] = (counts[m.p.category] || 0) + 1; });
+    renderFilters(counts);
+
+    const shown = matches
+      .filter(m => state.cat === "All" || m.p.category === state.cat)
+      .sort((a, b) => state.sort === "channels" ? b.p.channels.length - a.p.channels.length : a.p.title.localeCompare(b.p.title));
+
+    const total = PLAYLISTS.length;
+    document.getElementById("shown").textContent = shown.length === total ? `${total} playlist${total === 1 ? "" : "s"}` : `${shown.length} of ${total}`;
+
+    const list = document.getElementById("index");
+    if (!shown.length) {
+      list.innerHTML = `<li class="empty">No playlist or channel matches “${esc(state.q.trim())}”. <button type="button" id="clear">Clear the search</button></li>`;
+      return;
+    }
+    list.innerHTML = shown.map(({ p, hits }) => {
+      const open = state.open.has(p.id);
+      const hitLine = hits.length
+        ? `<div class="hit">${hits.slice(0, 3).map(h => highlight(h.name, q)).join(", ")}${hits.length > 3 ? ` and ${hits.length - 3} more` : ""}</div>` : "";
+      const channels = open ? `<ul class="channels">${p.channels.map((c, n) =>
+        `<li><span class="ch-no">${String(n + 1).padStart(2, "0")}</span><span class="ch-name">${highlight(c.name, q)}</span>${Object.keys(p.groups).length > 1 ? `<span class="ch-group">${esc(c.group)}</span>` : ""}</li>`).join("")}</ul>` : "";
+      return `
+        <li class="row${open ? " open" : ""}">
+          <div class="row-main">
+            <div class="info">
+              <div class="name"><h2>${highlight(p.title, q)}</h2><span class="cat">${esc(p.category)}</span></div>
+              <p class="desc">${esc(p.description)}</p>
+              ${hitLine}
+              <div class="file"><span>${esc(p.file)}</span><button class="icon-btn sm" type="button" data-copy="${rawUrl(p.file)}" title="Copy playlist address" aria-label="Copy the address of ${esc(p.title)}">${icon.copy}</button></div>
+            </div>
+            <span class="count">${p.channels.length} ch</span>
+            <div class="acts">
+              <button class="icon-btn toggle" type="button" data-toggle="${p.id}" aria-expanded="${open}" aria-label="${open ? "Hide" : "Show"} the channels in ${esc(p.title)}">${icon.chevron}</button>
+              <a class="btn" href="${openUrl(p)}" target="_blank" rel="noopener">${icon.play} Open in Mediagg</a>
+            </div>
+          </div>
+          ${channels}
+        </li>`;
+    }).join("");
+  }
+
+  const toast = document.getElementById("toast");
+  let toastTimer;
+  function say(msg) {
+    toast.textContent = msg; toast.hidden = false;
+    clearTimeout(toastTimer); toastTimer = setTimeout(() => { toast.hidden = true; }, 2200);
+  }
+
+  document.getElementById("q").addEventListener("input", e => { state.q = e.target.value; render(); });
+  document.addEventListener("click", e => {
+    const t = e.target.closest("[data-cat], [data-toggle], [data-copy], #clear");
+    if (!t) return;
+    if (t.dataset.cat) { state.cat = t.dataset.cat; render(); }
+    else if (t.dataset.toggle) { const id = +t.dataset.toggle; state.open.has(id) ? state.open.delete(id) : state.open.add(id); render(); }
+    else if (t.dataset.copy) {
+      navigator.clipboard.writeText(t.dataset.copy).then(() => say("Address copied")).catch(() => say(t.dataset.copy));
+    } else if (t.id === "clear") { state.q = ""; document.getElementById("q").value = ""; render(); }
+  });
+  document.addEventListener("change", e => {
+    if (e.target.id !== "sort") return;
+    state.sort = e.target.value;
+    try { localStorage.setItem("m3us-sort", state.sort); } catch (err) {}
+    render();
+  });
+
+  const list = document.getElementById("index");
+  list.innerHTML = '<li class="empty">Loading the playlists…</li>';
+  fetch("playlists.json", { cache: "no-cache" })
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(data => {
+      PLAYLISTS = data.playlists;
+      PLAYLISTS.forEach((p, i) => {
+        p.id = i;
+        p.channels = Object.entries(p.groups).flatMap(([g, names]) => names.map(name => ({ name, group: g })));
+      });
+      render();
+    })
+    .catch(() => {
+      list.innerHTML = `<li class="empty">The playlist index did not load. The playlists are in <a href="https://github.com/${REPO}/tree/${BRANCH}/playlists">the repository</a>.</li>`;
+    });
+</script>
+</body>
+</html>

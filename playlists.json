@@ -1,0 +1,47 @@
+{
+ "playlists": [
+  {
+   "file": "playlists/trace-afrobeat.m3u",
+   "title": "Trace & Afrobeat TV",
+   "category": "Music",
+   "description": "Every Trace channel iptv-org lists, one entry per feed, and Afrobeat TV.",
+   "groups": {
+    "Trace": [
+     "Trace Africa",
+     "Trace Afrikora",
+     "Trace Ayiti",
+     "Trace Brazuca HD",
+     "Trace Brazuca",
+     "Trace Caribbean",
+     "Trace Gospel Nigeria and East Africa",
+     "Trace Gospel",
+     "Trace Gospel Southern Africa",
+     "Trace Ivoire",
+     "Trace Jama",
+     "Trace Kitoko",
+     "Trace Latina",
+     "Trace Mboa",
+     "Trace Muzika",
+     "Trace Mziki",
+     "Trace Naija",
+     "Trace Ngoma",
+     "Trace Sport Stars",
+     "Trace Sport Stars Russia",
+     "Trace Sport Stars SD",
+     "Trace Toca",
+     "Trace UK",
+     "Trace Urban Africa Franco",
+     "Trace Urban Caribbean And Indian Ocean",
+     "Trace Urban HD",
+     "Trace Urban International HD",
+     "Trace Urban",
+     "Trace Urban Southern Africa",
+     "Trace Vanilla Islands"
+    ],
+    "Afrobeat": [
+     "Afrobeat TV Entertainment"
+    ]
+   }
+  }
+ ]
+}
