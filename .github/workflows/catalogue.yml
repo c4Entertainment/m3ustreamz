@@ -1,0 +1,26 @@
+# Rewrite playlists.json each week, an hour after c4Entertainment/m3u-radio-music-playlists merges
+# junguler's main, so the site lists the channels its linked playlists carry now.
+name: Catalogue
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  catalogue:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rewrite playlists.json
+        run: python3 scripts/catalogue.py
+      - name: Commit it if it changed
+        run: |
+          git diff --quiet playlists.json && { echo "playlists.json unchanged"; exit 0; }
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "playlists.json: the linked playlists as they are now" playlists.json
+          git push
