@@ -9,9 +9,11 @@ Curated M3U playlists of free, legal streams, built from [iptv-org](https://gith
 | [`playlists/bbc-radio-lsn.m3u`](playlists/bbc-radio-lsn.m3u) | The same stations through lsn.lv, from the same gist |
 
 The site also lists playlists hosted elsewhere, opened at their own address so they stay as their
-source keeps them: the 31 You Radio playlists in
-[laurentjuma/m3u-radio-music-playlists](https://github.com/laurentjuma/m3u-radio-music-playlists/tree/main/you_radio/m3u/stations), and Kenya from its
-[`+checked+`](https://github.com/laurentjuma/m3u-radio-music-playlists/blob/main/%2Bchecked%2B/k/ke.m3u) lists.
+source keeps them: the 31 You Radio playlists and Kenya from
+[c4Entertainment/m3u-radio-music-playlists](https://github.com/c4Entertainment/m3u-radio-music-playlists),
+a fork of [junguler/m3u-radio-music-playlists](https://github.com/junguler/m3u-radio-music-playlists)
+with `you_radio/` and the country lists added. `scripts/sync-radio.sh` merges junguler's `main` into it
+on GitHub and rewrites `playlists.json`; a conflict stops it, to be merged by hand.
 
 ## The site
 

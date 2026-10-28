@@ -199,8 +199,8 @@
    "title": "100fm",
    "category": "Music Radio",
    "description": "You Radio stations in 25 genres.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/100fm.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · 100fm.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/100fm.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · 100fm.m3u",
    "groups": {
     "Smooth Jazz": [
      "100fm - 100% Cafe"
@@ -318,8 +318,8 @@
    "title": "80s80s",
    "category": "Music Radio",
    "description": "You Radio stations in 10 genres.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/80s80s.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · 80s80s.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/80s80s.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · 80s80s.m3u",
    "groups": {
     "80s/Holiday": [
      "80s80s Christmas"
@@ -361,8 +361,8 @@
    "title": "90s90s Radio",
    "category": "Music Radio",
    "description": "You Radio stations in 14 genres.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/90s90s.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · 90s90s.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/90s90s.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · 90s90s.m3u",
    "groups": {
     "90s/Pop": [
      "90s90s Summer Hits",
@@ -430,8 +430,8 @@
    "title": "Best Of You Radio",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/best_of_you_radio.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · best_of_you_radio.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/best_of_you_radio.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · best_of_you_radio.m3u",
    "groups": {
     "Best Of You Radio": [
      "Smooth Jazz",
@@ -458,8 +458,8 @@
    "title": "Billionz Club",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/billionz_club.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · billionz_club.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/billionz_club.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · billionz_club.m3u",
    "groups": {
     "Billionz Club": [
      "Noel Edmonds' Billions Club"
@@ -470,8 +470,8 @@
    "title": "Bollywood Radio",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/bollywood_radio.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · bollywood_radio.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/bollywood_radio.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · bollywood_radio.m3u",
    "groups": {
     "Bollywood Radio": [
      "Bollywood 2010's",
@@ -514,8 +514,8 @@
    "title": "Calm Radio",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/calm_radio.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · calm_radio.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/calm_radio.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · calm_radio.m3u",
    "groups": {
     "Calm Radio": [
      "Calm Zen",
@@ -553,8 +553,8 @@
    "title": "Classical Radio",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/classical_radio.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · classical_radio.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/classical_radio.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · classical_radio.m3u",
    "groups": {
     "Classical Radio": [
      "André Rieu",
@@ -627,8 +627,8 @@
    "title": "Country Music Radio",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/country_music_radio.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · country_music_radio.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/country_music_radio.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · country_music_radio.m3u",
    "groups": {
     "Country Music Radio": [
      "20's Country",
@@ -737,8 +737,8 @@
    "title": "Easy Radio",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/easy_radio.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · easy_radio.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/easy_radio.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · easy_radio.m3u",
    "groups": {
     "Easy Radio": [
      "Easy 10s",
@@ -817,8 +817,8 @@
    "title": "Exclusive Radio",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/exclusive_radio.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · exclusive_radio.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/exclusive_radio.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · exclusive_radio.m3u",
    "groups": {
     "Exclusive Radio": [
      "50 Cent",
@@ -1380,8 +1380,8 @@
    "title": "Exclusive Radio Hits Only",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/exclusive_radio_hits_only.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · exclusive_radio_hits_only.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/exclusive_radio_hits_only.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · exclusive_radio_hits_only.m3u",
    "groups": {
     "Exclusive Radio Hits Only": [
      "ABBA - HITS",
@@ -1509,8 +1509,8 @@
    "title": "For Kids",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/for_kids.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · for_kids.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/for_kids.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · for_kids.m3u",
    "groups": {
     "For Kids": [
      "Bathtime Fun",
@@ -1534,8 +1534,8 @@
    "title": "Greatest Hits",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/greatest_hits.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · greatest_hits.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/greatest_hits.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · greatest_hits.m3u",
    "groups": {
     "Greatest Hits": [
      "1920's",
@@ -1561,8 +1561,8 @@
    "title": "Just Jazz Radio",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/just_jazz_radio.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · just_jazz_radio.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/just_jazz_radio.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · just_jazz_radio.m3u",
    "groups": {
     "Just Jazz Radio": [
      "Al Jarreau",
@@ -1619,8 +1619,8 @@
    "title": "Love Radio",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/love_radio.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · love_radio.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/love_radio.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · love_radio.m3u",
    "groups": {
     "Love Radio": [
      "2010's",
@@ -1654,8 +1654,8 @@
    "title": "Positivity Radio",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/positivity_radio.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · positivity_radio.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/positivity_radio.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · positivity_radio.m3u",
    "groups": {
     "Positivity Radio": [
      "Positively Good Night",
@@ -1744,8 +1744,8 @@
    "title": "Rock The World Radio",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/rock_the_world_radio.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · rock_the_world_radio.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/rock_the_world_radio.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · rock_the_world_radio.m3u",
    "groups": {
     "Rock The World Radio": [
      "Alt Rock",
@@ -1763,8 +1763,8 @@
    "title": "Sportify",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/sportify.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · sportify.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/sportify.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · sportify.m3u",
    "groups": {
     "Sportify": [
      "2000's Throwbacks",
@@ -1793,8 +1793,8 @@
    "title": "Ticktock 1950s",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_1950s.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · ticktock_1950s.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_1950s.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · ticktock_1950s.m3u",
    "groups": {
     "Ticktock 1950s": [
      "1950",
@@ -1814,8 +1814,8 @@
    "title": "Ticktock 1960s",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_1960s.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · ticktock_1960s.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_1960s.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · ticktock_1960s.m3u",
    "groups": {
     "Ticktock 1960s": [
      "1960",
@@ -1835,8 +1835,8 @@
    "title": "Ticktock 1970s",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_1970s.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · ticktock_1970s.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_1970s.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · ticktock_1970s.m3u",
    "groups": {
     "Ticktock 1970s": [
      "1970",
@@ -1856,8 +1856,8 @@
    "title": "Ticktock 1980s",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_1980s.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · ticktock_1980s.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_1980s.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · ticktock_1980s.m3u",
    "groups": {
     "Ticktock 1980s": [
      "1980",
@@ -1877,8 +1877,8 @@
    "title": "Ticktock 1990s",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_1990s.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · ticktock_1990s.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_1990s.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · ticktock_1990s.m3u",
    "groups": {
     "Ticktock 1990s": [
      "1990",
@@ -1898,8 +1898,8 @@
    "title": "Ticktock 2000s",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_2000s.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · ticktock_2000s.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_2000s.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · ticktock_2000s.m3u",
    "groups": {
     "Ticktock 2000s": [
      "2000",
@@ -1919,8 +1919,8 @@
    "title": "Ticktock 2010s",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_2010s.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · ticktock_2010s.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_2010s.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · ticktock_2010s.m3u",
    "groups": {
     "Ticktock 2010s": [
      "2010",
@@ -1940,8 +1940,8 @@
    "title": "Ticktock 2020s",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_2020s.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · ticktock_2020s.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_2020s.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · ticktock_2020s.m3u",
    "groups": {
     "Ticktock 2020s": [
      "2020",
@@ -1958,8 +1958,8 @@
    "title": "Ticktock Trending",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_trending.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · ticktock_trending.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_trending.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · ticktock_trending.m3u",
    "groups": {
     "Ticktock Trending": [
      "TikTok Trending",
@@ -1973,8 +1973,8 @@
    "title": "Wake Up Radio",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/wake_up_radio.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · wake_up_radio.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/wake_up_radio.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · wake_up_radio.m3u",
    "groups": {
     "Wake Up Radio": [
      "Wake Up - All Time Greatest Protest Songs"
@@ -1985,8 +1985,8 @@
    "title": "World Music Radio",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/world_music_radio.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · world_music_radio.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/world_music_radio.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · world_music_radio.m3u",
    "groups": {
     "World Music Radio": [
      "Afrobeats",
@@ -2001,8 +2001,8 @@
    "title": "You Play",
    "category": "Music Radio",
    "description": "You Radio stations.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/you_play.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · you_play.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/you_radio/m3u/stations/you_play.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · you_play.m3u",
    "groups": {
     "You Play": [
      "Alex Hart",
@@ -2023,8 +2023,8 @@
    "title": "Kenya",
    "category": "Radio by country",
    "description": "Kenyan radio stations that answered when last checked, from the repository's +checked+ lists.",
-   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/%2Bchecked%2B/k/ke.m3u",
-   "label": "laurentjuma/m3u-radio-music-playlists · ke.m3u",
+   "url": "https://raw.githubusercontent.com/c4Entertainment/m3u-radio-music-playlists/main/%2Bchecked%2B/k/ke.m3u",
+   "label": "c4Entertainment/m3u-radio-music-playlists · ke.m3u",
    "groups": {
     "Channels": [
      "Emoo Fm",
@@ -2033,6 +2033,7 @@
      "Vuuka FM",
      "Jesus is Lord Radio",
      "Inooro FM",
+     "Baraka FM",
      "Capital Fm Kenya",
      "Gukena FM",
      "Classic 105",
@@ -2041,6 +2042,7 @@
      "Kameme FM",
      "LionafriQ Radio",
      "BLUE RADIO",
+     "North Rift Radio",
      "NRG Radio",
      "Radio44 Kenya",
      "Radio Jambo",
