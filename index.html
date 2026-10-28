@@ -193,7 +193,11 @@
   const BRANCH = "main";
   let PLAYLISTS = [];
 
-  const openUrl = p => `https://mediagg.app/open/?url=${p.url}`;
+  // On Android the app by name (`intent://`): one component takes it, so no "Chrome or Mediagg?" and
+  // no Mediagg listed twice; without the app, Chrome opens mediagg.app/web instead.
+  const openUrl = p => /Android/i.test(navigator.userAgent)
+    ? `intent://open?url=${encodeURIComponent(p.url)}#Intent;scheme=mediagg;package=app.mediagg;S.browser_fallback_url=${encodeURIComponent(`https://mediagg.app/web/?open=${p.url}`)};end`
+    : `https://mediagg.app/open/?url=${p.url}`;
   const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const fold = s => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
   const icon = {
