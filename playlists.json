@@ -153,7 +153,7 @@
   },
   {
    "title": "Trace & Afrobeat TV",
-   "category": "Music",
+   "category": "Music TV",
    "description": "Every Trace channel iptv-org lists, one entry per feed, and Afrobeat TV.",
    "url": "https://raw.githubusercontent.com/c4Entertainment/m3ustreamz/main/playlists/trace-afrobeat.m3u",
    "label": "playlists/trace-afrobeat.m3u",
@@ -197,7 +197,7 @@
   },
   {
    "title": "100fm",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations in 25 genres.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/100fm.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · 100fm.m3u",
@@ -316,7 +316,7 @@
   },
   {
    "title": "80s80s",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations in 10 genres.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/80s80s.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · 80s80s.m3u",
@@ -359,7 +359,7 @@
   },
   {
    "title": "90s90s Radio",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations in 14 genres.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/90s90s.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · 90s90s.m3u",
@@ -428,7 +428,7 @@
   },
   {
    "title": "Best Of You Radio",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/best_of_you_radio.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · best_of_you_radio.m3u",
@@ -456,7 +456,7 @@
   },
   {
    "title": "Billionz Club",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/billionz_club.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · billionz_club.m3u",
@@ -468,7 +468,7 @@
   },
   {
    "title": "Bollywood Radio",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/bollywood_radio.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · bollywood_radio.m3u",
@@ -512,7 +512,7 @@
   },
   {
    "title": "Calm Radio",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/calm_radio.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · calm_radio.m3u",
@@ -551,7 +551,7 @@
   },
   {
    "title": "Classical Radio",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/classical_radio.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · classical_radio.m3u",
@@ -625,7 +625,7 @@
   },
   {
    "title": "Country Music Radio",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/country_music_radio.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · country_music_radio.m3u",
@@ -735,7 +735,7 @@
   },
   {
    "title": "Easy Radio",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/easy_radio.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · easy_radio.m3u",
@@ -815,7 +815,7 @@
   },
   {
    "title": "Exclusive Radio",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/exclusive_radio.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · exclusive_radio.m3u",
@@ -1378,7 +1378,7 @@
   },
   {
    "title": "Exclusive Radio Hits Only",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/exclusive_radio_hits_only.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · exclusive_radio_hits_only.m3u",
@@ -1507,7 +1507,7 @@
   },
   {
    "title": "For Kids",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/for_kids.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · for_kids.m3u",
@@ -1532,7 +1532,7 @@
   },
   {
    "title": "Greatest Hits",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/greatest_hits.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · greatest_hits.m3u",
@@ -1559,7 +1559,7 @@
   },
   {
    "title": "Just Jazz Radio",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/just_jazz_radio.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · just_jazz_radio.m3u",
@@ -1617,7 +1617,7 @@
   },
   {
    "title": "Love Radio",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/love_radio.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · love_radio.m3u",
@@ -1652,7 +1652,7 @@
   },
   {
    "title": "Positivity Radio",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/positivity_radio.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · positivity_radio.m3u",
@@ -1742,7 +1742,7 @@
   },
   {
    "title": "Rock The World Radio",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/rock_the_world_radio.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · rock_the_world_radio.m3u",
@@ -1761,7 +1761,7 @@
   },
   {
    "title": "Sportify",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/sportify.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · sportify.m3u",
@@ -1791,7 +1791,7 @@
   },
   {
    "title": "Ticktock 1950s",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_1950s.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · ticktock_1950s.m3u",
@@ -1812,7 +1812,7 @@
   },
   {
    "title": "Ticktock 1960s",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_1960s.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · ticktock_1960s.m3u",
@@ -1833,7 +1833,7 @@
   },
   {
    "title": "Ticktock 1970s",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_1970s.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · ticktock_1970s.m3u",
@@ -1854,7 +1854,7 @@
   },
   {
    "title": "Ticktock 1980s",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_1980s.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · ticktock_1980s.m3u",
@@ -1875,7 +1875,7 @@
   },
   {
    "title": "Ticktock 1990s",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_1990s.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · ticktock_1990s.m3u",
@@ -1896,7 +1896,7 @@
   },
   {
    "title": "Ticktock 2000s",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_2000s.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · ticktock_2000s.m3u",
@@ -1917,7 +1917,7 @@
   },
   {
    "title": "Ticktock 2010s",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_2010s.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · ticktock_2010s.m3u",
@@ -1938,7 +1938,7 @@
   },
   {
    "title": "Ticktock 2020s",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_2020s.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · ticktock_2020s.m3u",
@@ -1956,7 +1956,7 @@
   },
   {
    "title": "Ticktock Trending",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/ticktock_trending.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · ticktock_trending.m3u",
@@ -1971,7 +1971,7 @@
   },
   {
    "title": "Wake Up Radio",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/wake_up_radio.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · wake_up_radio.m3u",
@@ -1983,7 +1983,7 @@
   },
   {
    "title": "World Music Radio",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/world_music_radio.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · world_music_radio.m3u",
@@ -1999,7 +1999,7 @@
   },
   {
    "title": "You Play",
-   "category": "You Radio",
+   "category": "Music Radio",
    "description": "You Radio stations.",
    "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/you_play.m3u",
    "label": "laurentjuma/m3u-radio-music-playlists · you_play.m3u",
