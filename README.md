@@ -10,7 +10,8 @@ Curated M3U playlists of free, legal streams, built from [iptv-org](https://gith
 
 The site also lists playlists hosted elsewhere, opened at their own address so they stay as their
 source keeps them: the 31 You Radio playlists in
-[laurentjuma/m3u-radio-music-playlists](https://github.com/laurentjuma/m3u-radio-music-playlists/tree/main/you_radio/m3u/stations).
+[laurentjuma/m3u-radio-music-playlists](https://github.com/laurentjuma/m3u-radio-music-playlists/tree/main/you_radio/m3u/stations), and Kenya from its
+[`+checked+`](https://github.com/laurentjuma/m3u-radio-music-playlists/blob/main/%2Bchecked%2B/k/ke.m3u) lists.
 
 ## The site
 

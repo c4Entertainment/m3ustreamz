@@ -199,5 +199,11 @@
   "category": "You Radio",
   "description": "You Radio stations.",
   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/you_radio/m3u/stations/you_play.m3u"
+ },
+ "checked/ke.m3u": {
+  "title": "Kenya",
+  "category": "Radio by country",
+  "description": "Kenyan radio stations that answered when last checked, from the repository's +checked+ lists.",
+  "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/%2Bchecked%2B/k/ke.m3u"
  }
 }

@@ -2018,6 +2018,59 @@
      "Wally Gator Sirotich - Piano"
     ]
    }
+  },
+  {
+   "title": "Kenya",
+   "category": "Radio by country",
+   "description": "Kenyan radio stations that answered when last checked, from the repository's +checked+ lists.",
+   "url": "https://raw.githubusercontent.com/laurentjuma/m3u-radio-music-playlists/main/%2Bchecked%2B/k/ke.m3u",
+   "label": "laurentjuma/m3u-radio-music-playlists · ke.m3u",
+   "groups": {
+    "Channels": [
+     "Emoo Fm",
+     "Musyi FM",
+     "Egesa FM",
+     "Vuuka FM",
+     "Jesus is Lord Radio",
+     "Inooro FM",
+     "Capital Fm Kenya",
+     "Gukena FM",
+     "Classic 105",
+     "Kiss 100 Kenya",
+     "Radio 254",
+     "Kameme FM",
+     "LionafriQ Radio",
+     "BLUE RADIO",
+     "NRG Radio",
+     "Radio44 Kenya",
+     "Radio Jambo",
+     "Kameme FM",
+     "HBR",
+     "Milele FM",
+     "Mayian FM",
+     "Family Radio 316",
+     "Meru Radio",
+     "Bahari FM 97.3",
+     "Radio Maisha",
+     "Capital Fm Kenya",
+     "FunX.Cool",
+     "Shiloh Radio",
+     "Radio Jambo",
+     "East FM",
+     "Homeboyz Radio",
+     "Classic 105",
+     "Inooro FM 88.9 FM",
+     "Chamgei-FM",
+     "Ramogi FM",
+     "Bahari FM",
+     "Sulwe FM",
+     "Radio Citizen",
+     "Mulembe FM",
+     "Musyi fm 102.2 FM",
+     "Radio 47",
+     "Swahilipot FM"
+    ]
+   }
   }
  ]
 }
