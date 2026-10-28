@@ -87,12 +87,15 @@
   /* Index */
   .index { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
   .row { border-top: 1px solid var(--line); }
-  .row:first-child { border-top: 0; }
+  .row:first-child, .section:first-child { border-top: 0; }
+  .section { display: flex; justify-content: space-between; gap: 1rem; padding: .7rem 1rem; border-top: 1px solid var(--line); background: var(--chip); font: 500 .72rem/1.2 var(--mono); text-transform: uppercase; letter-spacing: .14em; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .section:first-child { border-radius: 10px 10px 0 0; }
+  .section span { color: var(--muted); }
   .row-main { display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: .4rem 1rem; padding: .8rem 1rem; }
   .info { min-width: 0; display: grid; gap: .1rem; }
   .name { display: flex; align-items: baseline; flex-wrap: wrap; gap: .5rem; }
-  h2 { margin: 0; font: 600 1.02rem/1.3 var(--body); }
-  .cat { font: 500 .66rem/1 var(--mono); text-transform: uppercase; letter-spacing: .12em; color: var(--accent); }
+  .name h3 { margin: 0; font: 600 1.02rem/1.3 var(--body); }
+  .section h2 { margin: 0; font: inherit; }
   .desc { margin: 0; color: var(--muted); font-size: .88rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .file { display: flex; align-items: center; gap: .25rem; font-family: var(--mono); font-size: .74rem; color: var(--muted); min-width: 0; }
   .file span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
@@ -135,7 +138,7 @@
   }
 
   .how { display: grid; gap: .8rem; }
-  .how h2 { font: 800 1.15rem/1.2 var(--display); }
+  .how h2 { margin: 0; font: 800 1.15rem/1.2 var(--display); }
   .steps { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; counter-reset: step; }
   .steps li { counter-increment: step; display: grid; align-content: start; gap: .25rem; color: var(--muted); font-size: .93rem; }
   .steps li::before { content: counter(step); font: 800 1.5rem/1 var(--display); color: var(--accent); }
@@ -233,7 +236,8 @@
 
     const shown = matches
       .filter(m => state.cat === "All" || m.p.category === state.cat)
-      .sort((a, b) => state.sort === "channels" ? b.p.channels.length - a.p.channels.length : a.p.title.localeCompare(b.p.title));
+      .sort((a, b) => a.p.category.localeCompare(b.p.category)
+        || (state.sort === "channels" ? b.p.channels.length - a.p.channels.length : a.p.title.localeCompare(b.p.title)));
 
     const total = PLAYLISTS.length;
     document.getElementById("shown").textContent = shown.length === total ? `${total} playlist${total === 1 ? "" : "s"}` : `${shown.length} of ${total}`;
@@ -243,17 +247,22 @@
       list.innerHTML = `<li class="empty">No playlist or channel matches “${esc(state.q.trim())}”. <button type="button" id="clear">Clear the search</button></li>`;
       return;
     }
-    list.innerHTML = shown.map(({ p, hits }) => {
+    // Playlists sit under their category's heading, in the chosen order within it.
+    const inCategory = {};
+    shown.forEach(m => { inCategory[m.p.category] = (inCategory[m.p.category] || 0) + 1; });
+    list.innerHTML = shown.map(({ p, hits }, i) => {
+      const section = i === 0 || shown[i - 1].p.category !== p.category
+        ? `<li class="section"><h2>${esc(p.category)}</h2><span>${inCategory[p.category]} playlist${inCategory[p.category] === 1 ? "" : "s"}</span></li>` : "";
       const open = state.open.has(p.id);
       const hitLine = hits.length
         ? `<div class="hit">${hits.slice(0, 3).map(h => highlight(h.name, q)).join(", ")}${hits.length > 3 ? ` and ${hits.length - 3} more` : ""}</div>` : "";
       const channels = open ? `<ul class="channels">${p.channels.map((c, n) =>
         `<li><span class="ch-no">${String(n + 1).padStart(2, "0")}</span><span class="ch-name">${highlight(c.name, q)}</span>${Object.keys(p.groups).length > 1 ? `<span class="ch-group">${esc(c.group)}</span>` : ""}</li>`).join("")}</ul>` : "";
-      return `
+      return `${section}
         <li class="row${open ? " open" : ""}">
           <div class="row-main">
             <div class="info">
-              <div class="name"><h2>${highlight(p.title, q)}</h2><span class="cat">${esc(p.category)}</span></div>
+              <div class="name"><h3>${highlight(p.title, q)}</h3></div>
               <p class="desc">${esc(p.description)}</p>
               ${hitLine}
               <div class="file"><span title="${esc(p.url)}">${esc(p.label)}</span><button class="icon-btn sm" type="button" data-copy="${esc(p.url)}" title="Copy playlist address" aria-label="Copy the address of ${esc(p.title)}">${icon.copy}</button></div>
