@@ -1,10 +1,12 @@
 # m3ustreamz
 
-Curated M3U playlists of free, legal streams, built from [iptv-org](https://github.com/iptv-org/iptv).
+Curated M3U playlists of free, legal streams, built from [iptv-org](https://github.com/iptv-org/iptv) and other public lists.
 
 | Playlist | What it carries |
 | --- | --- |
 | [`playlists/trace-afrobeat.m3u`](playlists/trace-afrobeat.m3u) | Every Trace channel iptv-org lists (one entry per feed), and Afrobeat TV |
+| [`playlists/bbc-radio.m3u`](playlists/bbc-radio.m3u) | BBC Radio's 64 national, nations and local stations over HLS, from [bpsib's gist](https://gist.github.com/bpsib/67089b959e4fa898af69fea59ad74bc3) (HTTPS; UK Only stations play only in the UK) |
+| [`playlists/bbc-radio-lsn.m3u`](playlists/bbc-radio-lsn.m3u) | The same stations through lsn.lv, from the same gist |
 
 ## The site
 

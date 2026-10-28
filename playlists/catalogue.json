@@ -3,5 +3,15 @@
   "title": "Trace & Afrobeat TV",
   "category": "Music",
   "description": "Every Trace channel iptv-org lists, one entry per feed, and Afrobeat TV."
+ },
+ "bbc-radio.m3u": {
+  "title": "BBC Radio",
+  "category": "Radio",
+  "description": "BBC national, nations and local radio, straight from the BBC's HLS streams. Stations marked UK Only play only in the UK. From bpsib's gist."
+ },
+ "bbc-radio-lsn.m3u": {
+  "title": "BBC Radio via lsn.lv",
+  "category": "Radio",
+  "description": "The same BBC stations through lsn.lv, which some devices and players handle better. From bpsib's gist."
  }
 }
