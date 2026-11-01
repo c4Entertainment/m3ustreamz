@@ -194,10 +194,15 @@
   let PLAYLISTS = [];
 
   // On Android the app by name (`intent://`): one component takes it, so no "Chrome or Mediagg?" and
-  // no Mediagg listed twice; without the app, Chrome opens mediagg.app/web instead.
+  // no Mediagg listed twice; without the app, Chrome opens mediagg.app/web instead. Elsewhere
+  // mediagg.app/open, which an iPhone or iPad with the app opens in it (Universal Links).
   const openUrl = p => /Android/i.test(navigator.userAgent)
-    ? `intent://open?url=${encodeURIComponent(p.url)}#Intent;scheme=mediagg;package=app.mediagg;S.browser_fallback_url=${encodeURIComponent(`https://mediagg.app/web/?open=${p.url}`)};end`
-    : `https://mediagg.app/open/?url=${p.url}`;
+    ? `intent://open?url=${encodeURIComponent(p.url)}#Intent;scheme=mediagg;package=app.mediagg;S.browser_fallback_url=${encodeURIComponent(`https://mediagg.app/web/?open=${encodeURIComponent(p.url)}`)};end`
+    : `https://mediagg.app/open/?url=${encodeURIComponent(p.url)}`;
+  // A new tab only on a computer, where the link is the web app. On a phone or tablet the tap is
+  // handed to the app, and Safari's new tab is one more thing between them. iPadOS says Macintosh.
+  const touch = /Android|iPhone|iPad/i.test(navigator.userAgent) || navigator.maxTouchPoints > 1;
+  const openTarget = touch ? "" : ` target="_blank" rel="noopener"`;
   const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const fold = s => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
   const icon = {
@@ -274,7 +279,7 @@
             <span class="count">${p.channels.length} ch</span>
             <div class="acts">
               <button class="icon-btn toggle" type="button" data-toggle="${p.id}" aria-expanded="${open}" aria-label="${open ? "Hide" : "Show"} the channels in ${esc(p.title)}">${icon.chevron}</button>
-              <a class="btn" href="${openUrl(p)}" target="_blank" rel="noopener">${icon.play} Open in Mediagg</a>
+              <a class="btn" href="${openUrl(p)}"${openTarget}>${icon.play} Open in Mediagg</a>
             </div>
           </div>
           ${channels}
